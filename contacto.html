@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Contacto · El Tablajero</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="El Tablajero: carnicería y supermercado en Puerto Rico. Cortes frescos, ofertas de la semana y encargos." />
+<link rel="icon" href="assets/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="css/style.css" />
+<script>try{if(sessionStorage.getItem("tbj_seen"))document.documentElement.classList.add("no-loader");sessionStorage.setItem("tbj_seen","1")}catch(e){}</script>
+</head>
+<body data-page="contacto">
+<div class="page-loader speckle" id="pageLoader"><img src="assets/logo.jpg" alt="El Tablajero" /></div>
+<header class="site-header" id="siteHeader"></header>
+<main>
+  <section class="page-banner">
+    <div class="bg speckle" data-parallax="0.15" aria-hidden="true"></div>
+    <div class="container">
+      <span class="eyebrow" id="contactEyebrow"></span>
+      <h1 id="contactTitle"></h1>
+      <p id="contactSubtitle"></p>
+      <ul class="contact-tags" id="contactTags"></ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="panel">
+        <h3>Envíanos un mensaje</h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field"><label for="cf_name">Nombre completo *</label><input type="text" id="cf_name" name="name" required /></div>
+            <div class="form-field"><label for="cf_email">Correo electrónico *</label><input type="email" id="cf_email" name="email" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field"><label for="cf_phone">Teléfono *</label><input type="tel" id="cf_phone" name="phone" required /></div>
+            <div class="form-field"><label for="cf_interest">¿En qué te ayudamos? *</label>
+              <select id="cf_interest" name="interest" required><option value="" disabled selected>Elige una opción</option></select></div>
+          </div>
+          <div class="form-field"><label for="cf_message">Tu mensaje *</label><textarea id="cf_message" name="message" required placeholder="Ej.: Quiero encargar un pernil de 10 lb para el sábado."></textarea></div>
+          <button type="submit" class="btn btn-orange">Enviar mensaje</button>
+        </form>
+      </div>
+      <div class="panel">
+        <h3>Información</h3>
+        <ul class="info-list" id="infoList"></ul>
+        <div class="map-box speckle">Espacio para el mapa de Google<br>(se conecta con la dirección final)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-cta speckle">
+    <div class="container cta-inner">
+      <div>
+        <span class="eyebrow" id="ctaEyebrow"></span>
+        <h2 id="ctaTitle"></h2>
+        <p id="ctaSubtitle"></p>
+      </div>
+      <a href="#contactForm" class="btn btn-dark" id="ctaButton"></a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer" id="siteFooter"></footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

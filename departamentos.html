@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Departamentos · El Tablajero</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="El Tablajero: carnicería y supermercado en Puerto Rico. Cortes frescos, ofertas de la semana y encargos." />
+<link rel="icon" href="assets/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="css/style.css" />
+<script>try{if(sessionStorage.getItem("tbj_seen"))document.documentElement.classList.add("no-loader");sessionStorage.setItem("tbj_seen","1")}catch(e){}</script>
+</head>
+<body data-page="departamentos">
+<div class="page-loader speckle" id="pageLoader"><img src="assets/logo.jpg" alt="El Tablajero" /></div>
+<header class="site-header" id="siteHeader"></header>
+<main>
+  <section class="page-banner">
+    <div class="bg speckle" data-parallax="0.15" aria-hidden="true"></div>
+    <div class="container">
+      <span class="eyebrow">El Tablajero</span>
+      <h1>Departamentos</h1>
+      <p>Del mostrador de carne a la góndola. Toca un departamento para ver lo que tenemos.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container"><div class="dept-grid" id="deptGrid"></div></div>
+  </section>
+</main>
+<footer class="site-footer" id="siteFooter"></footer>
+<div class="modal-overlay" id="deptModal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

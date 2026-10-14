@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>El Tablajero</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="El Tablajero: carnicería y supermercado en Puerto Rico. Cortes frescos, ofertas de la semana y encargos." />
+<link rel="icon" href="assets/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="css/style.css" />
+<script>try{if(sessionStorage.getItem("tbj_seen"))document.documentElement.classList.add("no-loader");sessionStorage.setItem("tbj_seen","1")}catch(e){}</script>
+</head>
+<body data-page="home">
+<div class="page-loader speckle" id="pageLoader"><img src="assets/logo.jpg" alt="El Tablajero" /></div>
+<header class="site-header" id="siteHeader"></header>
+<main>
+  <section class="hero">
+    <div class="hero-bg speckle" data-parallax="0.15" aria-hidden="true"></div>
+    <div class="container hero-layout">
+      <div class="hero-text">
+        <span class="eyebrow" id="heroEyebrow"></span>
+        <h1 id="heroTitle"></h1>
+        <p class="hero-tagline" id="heroSubtitle"></p>
+        <div class="hero-actions">
+          <a href="ofertas.html" class="btn btn-dark">Ver ofertas de la semana</a>
+          <a href="contacto.html" class="btn btn-line">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-logo"><img src="assets/logo-hero.webp" alt="Logo de El Tablajero" width="640" height="640" fetchpriority="high" /></div>
+    </div>
+    <div class="hero-ticker" id="ticker" aria-hidden="true"></div>
+  </section>
+
+  <section class="section" id="especial">
+    <div class="container">
+      <div class="featured reveal" id="featuredBlock"></div>
+      <div class="features">
+        <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21 15 9l3 3c1.5-1.5 3-5 1-8-3-2-6.5-.5-8 1l3 3"/><path d="M3 21h4l4-4"/></svg><div><h3>Corte al momento</h3><p>Tú escoges el grosor y el corte.</p></div></div>
+        <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 16-9 0 10-3 16-9 16z"/><path d="M4 20c4-4 7-6 11-8"/></svg><div><h3>Del país</h3><p>Viandas y frutas de la isla.</p></div></div>
+        <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><div><h3>Encargos</h3><p>Lo dejamos listo a tu nombre.</p></div></div>
+        <div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg><div><h3>ATH Móvil</h3><p>Y tarjetas, efectivo y PAN.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow">Lo que hay en la tienda</span><h2>Departamentos</h2></div>
+        <a class="link-arrow" href="departamentos.html">Ver todos →</a>
+      </div>
+      <div class="dept-grid" id="deptPreview"></div>
+    </div>
+  </section>
+
+  <section class="section orders speckle">
+    <div class="container orders-inner">
+      <div>
+        <span class="eyebrow" id="ordersEyebrow"></span>
+        <h2 id="ordersTitle"></h2>
+        <p class="lead" id="ordersBody"></p>
+        <div class="hero-actions"><a href="contacto.html" class="btn btn-dark">Hacer un encargo</a></div>
+      </div>
+      <ol class="steps" id="ordersSteps"></ol>
+    </div>
+  </section>
+</main>
+<footer class="site-footer" id="siteFooter"></footer>
+<div class="modal-overlay" id="deptModal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>
